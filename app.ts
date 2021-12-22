@@ -23,7 +23,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 // Environment variables
 dotenv.config({ path: './src/env/.env' });
-
+//storage folder to upload the images
+app.use('/public', express.static(`${__dirname}/storage`));
 // Api routes
 app.use('/api', routes);
 

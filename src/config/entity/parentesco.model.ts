@@ -4,6 +4,16 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 export class parentesco {
   @PrimaryGeneratedColumn()
   id: number;
+
   @Column()
   descripcion: string;
+
+  @Column()
+  created_at: string;
+
+  @Column()
+  updated_at: string;
+
+  @Column()
+  estado: string;
 }

@@ -8,40 +8,40 @@ export class usuarios {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column()
   tipo_id: string;
 
-  @Column({ type: 'int', length: 255 })
+  @Column()
   documento: number;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column()
   nombres: string;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column()
   apellidos: string;
 
-  @Column({ type: 'varchar', length: 50 })
+  @Column()
   sexo: string;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column()
   email: string;
 
-  @Column({ type: 'int', length: 30 })
+  @Column()
   telefono: number;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column()
   imgUrl: string;
 
   @Column()
   fecha_nacimiento: Date;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column()
   departamento: string;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column()
   ciudad: string;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Column()
   contrasena: string;
 
   @OneToOne((type) => Tipo_usuario, { eager: true, cascade: true })
@@ -52,4 +52,13 @@ export class usuarios {
 
   @OneToOne((type) => usuarios, { eager: true, cascade: true })
   titular_id: usuarios;
+
+  @Column()
+  created_at: string;
+
+  @Column()
+  updated_at: string;
+
+  @Column()
+  estado: string;
 }
